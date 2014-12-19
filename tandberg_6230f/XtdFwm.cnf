@@ -1,0 +1,865 @@
+#
+# XtdFwm.cnf - Sample configuration file 
+# for the TDV 6230F TDV 6310F and TDV 6330 of Tandberg Data A/S
+#
+# Copyright 2002-2014 Rolf Hemmerling
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+#Action after power on or reboot
+#Values: [ X | Telnet | CTERM | LAT | Serial_A | Serial_B | Menu ]
+#Default: X
+#Stored in NVRAM: YES
+#
+#Action_At_Reset = X
+
+#Some applications do not check the X terminals value of White and Black Pixel
+#but assume that White_Pixel = 0 and Black_Pixel = 1. This is not the case for
+#Tandberg X terminals. For this reason a switch called Alt_Black_White_Pixel is
+#made available.
+#Values: [ NO | YES]
+#Default: NO
+#Stored in NVRAM: NO
+#
+#Alt_Black_White_Pixel = NO
+
+#Controls whether arc caching should be performed.
+#Values: [ ON | OFF ]
+#Default: ON
+#Stored in NVRAM: NO
+#
+#ArcCache = ON
+
+#Defines repeat rate on the autorepeating keys
+#Values: [ Off | 3 | 8 | 10 | 12 | 15 | 20 | 30 ]
+#Default: 10
+#Stored in NVRAM: YES
+#
+#Auto_Repeat = 15
+
+#Should the X server reset after session manager is taken down or
+#after last client.
+#Values: [ Session_Manager | Last_Client ]
+#Default: Session_Manager
+#Stored in NVRAM: NO
+#
+#Auto_Reset_By = Session_Manager
+
+#X Backingstore
+#Values: [Always_Off | On_Request | Auto_When_Mapped ]
+#Default: On_Request
+#Stored in NVRAM: YES
+#
+#Backing_Store = On_Request
+
+#Baud rate setting for channel A
+#Values: [ 300 | 600 | 1200 | 2400 | 4800 | 9600 | 19200 | 38400 ]
+#Default: 9600
+#Stored in NVRAM: YES
+#
+#Baudrate_A = 9600
+
+#Baud rate setting for channel B
+#Values: [ 300 | 600 | 1200 | 2400 | 4800 | 9600 | 19200 | 38400 ]
+#Default: 9600
+#Stored in NVRAM: YES
+#
+#Baudrate_B = 9600
+
+#Defines bell volume
+#Values: [ Off | Low | Medium | High ]
+#Default: Medium
+#Stored in NVRAM: YES
+#
+#Bell_Volume = Medium
+
+#The number of bitplanes to use on HW that supports i.e. TDV 6230F.
+#Values: [ 1 | 4 | 8 ]
+#Default: 4
+#Stored in NVRAM: NO
+#
+#Bitplanes = Default
+
+#Type of boot service
+#Values [ BOOTP | RARP | Manual ]
+#Default: BOOTP
+#Stored in NVRAM: YES
+#
+#Boot_Service_Type = BOOTP
+
+#Type of network to boot in
+#Values: [ TCP/IP | TDVnet ]
+#Default: TCP/IP
+#Stored in NVRAM: YES
+#
+Boot_Net = TCP/IP
+
+#Broadcast address
+#Value: [ <Ip address> ]
+#Default: 255.255.255.255
+#Stored in NVRAM: YES
+#
+Broadcast_Address = 192.168.2.255
+
+#Remote configuration access protocol
+#Values: [TFTP | NFS | TDVnet ]
+#Default: TFTP
+#Stored in NVRAM: NO
+#
+#Config_Access = TFTP
+
+#Number of databits per character on serial channel A
+#Values: [ 7 | 8 ]
+#Default: 8
+#Stored in NVRAM: YES
+#
+#Databits_A = 8
+
+#Number of databits per character on serial channel B
+#Values: [ 7 | 8 ]
+#Default: 8
+#Stored in NVRAM: YES
+#
+#Databits_B = 8
+
+#Shall the terminal poll the XDM manager
+#Values: [ On | Off ]
+#Default: Off
+#Stored in NVRAM: NO
+#
+#Dead_Session_Detect = Off
+
+#DECnet address for default CTERM host
+#Values: [ <DECnet address> | <hostname> ]
+#Default: 0.0
+#Stored in NVRAM: NO
+#
+#Default_CTERM_Host =
+
+#IP address of default gateway
+#Value: [<Ip address>|hostname]
+#Default: 0.0.0.0
+#Stored in NVRAM: YES
+#
+Default_Gateway = 192.168.2.129
+
+#Default name of LAT service (host) to connect to
+#Value: [Name of LAT service]
+#Default: None
+#Stored in NVRAM: NO
+#
+#Default_LAT_Service =
+
+#IP address or hostname of default telnet host
+#Value: [<Ip address>|hostname]
+#Default: None
+#Stored in NVRAM: YES
+#
+Default_Telnet_Host = 192.168.2.129
+
+#Enables the setting of the DES_Private_Key in System Parameters Menu
+#Values: [ YES | NO ]
+#Default: NO
+#Stored in NVRAM: NO
+#
+#DES_Key_Change_Enable =
+
+#Sets up the keyboard to perform the soft security lock functionality
+#Values: [ Disabled | <decimal X keycode> ]
+#Default: Disabled
+#Stored in NVRAM: NO
+#
+#Display_Lock_Key =
+
+#XDM Display manager host
+#Value: [ <Ip address> | DECnet_address | <hostname> ]
+#Default: value same as Default_Telnet_host
+#Stored in NVRAM: NO
+#
+Display_Manager_Host = 192.168.2.129
+
+#Domain name to be appended to host name
+#Value: <character string>
+#Default: Nothing
+#Stored in NVRAM: NO
+#
+Domain_Suffix = Default
+
+#Primary font access protocol
+#Values: [TFTP | NFS | TDVnet ]
+#Default: TFTP
+#Stored in NVRAM: YES
+#
+Font_Access_1 = TFTP
+
+#Secondary font access protocol
+#Values: [TFTP | NFS | TDVnet ]
+#Default: TFTP
+#Stored in NVRAM: YES
+#
+Font_Access_2 = TFTP
+
+#Should the server retain fonts after last refering client disconnects
+#Values: [YES | NO ]
+#Default: YES
+#Stored in NVRAM: NO
+#
+#Font_Caching = YES
+
+#X server default font path
+#Values: <Path to Fonts> [,<Path to Fonts> [...]]
+# X font server names over a TCP connection
+# tcp/<hostname>:<port>
+# tcp/hostname:port/cataloguelist
+# X font server names over a DECnet connection:
+# decnet/<nodename>::font$objname
+# decnet/<nodename>::font$objname/cataloguelist
+#Default: Values = /usr/lib/X11/td/fonts/misc
+# /usr/lib/X11/td/fonts/75dpi
+# /usr/lib/X11/td/fonts/100dpi
+# TDV_FONTS:[MISC], TDV_FONTS:[75DPI], TDV_FONTS[100DPI]
+#Stored in NVRAM: NO
+#
+#Font_Path = /usr/lib/X11/td/fonts/misc
+# /usr/lib/X11/td/fonts/75dpi
+# /usr/lib/X11/td/fonts/100dpi
+
+#Which host to use as primary font server
+#Value: [ <hostname> | DECnet_address | <IP address> ]
+#Default: 0.0.0.0
+#Stored in NVRAM: YES
+#
+Font_Server_1 = 192.168.2.129
+
+#Which host to use as secondary font server
+#Value: [ <hostname> | DECnet_address | <IP address> ]
+#Default: 0.0.0.0
+#Stored in NVRAM: YES
+#
+Font_Server_2 = 192.168.2.129
+
+#Specifies the number of seconds to wait for the X font server tp reply on a
+#connection request
+#Values: < 1 - 100 >
+#Default: 20
+#Stored in NVRAM: NO
+#
+#FS_Timeout =
+
+#The user's group ID on the UNIX host. Gid should not be specified in the
+#global configuration file.
+#Values: <-2 - 999999999>
+#Default: -2
+#Stored in NVRAM: NO
+#
+#Gid = -2
+
+#Flow control method for serial channel A
+#Values: [ None | Xon/Xoff | RTS+CTS | DTR+DSR ]
+#Default: Xon/Xoff
+#Stored in NVRAM: YES
+#
+#Handshake_A = Xon/Xoff
+
+#Flow control method for serial channel B
+#Values: [ None | Xon/Xoff | RTS+CTS | DTR+DSR ]
+#Default: Xon/Xoff
+#Stored in NVRAM: YES
+#
+#Handshake_B = Xon/Xoff
+
+#Indicates permission to set UID and GID.
+#Values: [ YES | NO ]
+#Default: NO
+#Stored in NVRAM: NO
+#
+#Id_Allowed = NO
+
+#The Include_File directive instructs the program parsing the configuration
+#file to include the contents of another file in the parsing process.
+#Value: [<host>:]<file name> (complete path)
+#Default: None
+#Stored in NVRAM: NO
+#
+#Include_File =
+
+#Serial interface adapter on channel B
+#Values: [ None | V.24 | V.11 | SS97 ]
+#Default value: None
+#Stored in NVRAM: YES
+#
+#Interface_B =
+
+#Internet address for the device
+#Values: <IP Address>
+#Default Value: 0.0.0.0
+#Stored in NVRAM: YES
+#
+#IP_Address =
+
+#Defines key click volume
+#Values: [ Off | Low | Medium | High ]
+#Default: Medium
+#Stored in NVRAM: YES
+#
+Key_Click = Off
+
+#Keyboard_Type used.
+#Values: [ default | MF102 | TDV5010 | SNI_KB | TDV5030 ]
+#Default: TDV5010 (if not TDV5030 is plugged in and the terminal
+# type =/= TDV6230/1
+#Stored in NVRAM: YES
+#
+Keyboard_Type = TDV5010
+
+#Language used in menus and warnings
+#Values: [ default | English | German | Norwegian | Swedish | French ]
+#Default: default (same as nationality)
+#Stored in NVRAM: NO
+#
+Language = English
+
+#Default time (millisec.) that input characters are qued before display station
+#flushes queud data and sends LAT packets to the host.
+#Values: [30-200]
+#Default: 90
+#Stored in NVRAM: NO
+#
+#LAT_Circuit_Delay = 90
+
+#The time (sec.) between retransmissions of LAT data packets
+#Value: 1->
+#Default: 2
+#Stored in NVRAM: NO
+#
+#LAT_Delay =
+
+#Maximum number of LAT service names stored by the X-terminal
+#Value: [10-500]
+#Default: 50
+#Stored in NVRAM: NO
+#
+#LAT_Directory_Limit =
+
+#Enabling of groups (0-255) listed in configuration files
+#Values: {Group number}
+#Default: 0
+#Stored in NVRAM: NO
+#
+#LAT_Groups =
+
+#Time in seconds of inactivity before LAT keepalive packet is sent
+#Value: 3->
+#Default: 20
+#Stored in NVRAM: NO
+#
+#LAT_Keepalive_Delay =
+
+#The number of seconds of inactivity on an established connection before LAT
+#keepalive packet is sent
+#Values: 3->
+#Default: 5
+#Stored in NVRAM: NO
+#
+#LAT_Retries =
+
+#What to do if host fail to respond
+#Values: [ Stop | Retry ]
+#Default: Stop
+#Stored in NVRAM: NO
+#
+Log_On_Fail_Action = Retry
+
+#Which level should not be available for the user
+#Values: [ All | None | SystemSetup ]
+#Default: None
+#Stored in NVRAM: NO
+#
+#Menu_Protection_Level = None
+
+#Allows remote reset via MOP
+#Values: [ YES | NO ]
+#Default: NO
+#Stored in NVRAM: NO
+#
+#MOP_Reset_Enable =
+
+#Protects the MOP reset feature with a password
+#Values: 16 hex digits: 0-9 and A-F (All 16 must be specified)
+#Default: None
+#Stored in NVRAM: NO
+#
+#MOP_Reset_Password =
+
+#Defines vaules for acceleration and threshold
+#Values: [ 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 ]
+#Default: 3
+#Stored in NVRAM: YES
+#
+#Mouse_Speed = 4
+
+#Enables mwm. If set to NO, frees memory normally used by WMW
+#Value: [ YES | NO ]
+#Default: YES
+#Stored in NVRAM: NO
+#
+MWM_Enable = YES
+
+#Specifies whether MWM should work without tdsh or not. If not, it will use
+#the built-in configuration file
+#Values: [ YES | NO]
+#Default: NO
+#Stored in NVRAM: NO
+#
+#MWM_Standalone = NO
+
+#Specifies whether the local windowmanager should start automatically after
+#X server initialization or reset. If not, automatic restart is postponded
+#until tdsh is running.
+#Values: [ YES | NO ]
+#Default: NO
+#Stored in NVRAM: NO
+#
+#MWM_Auto_Start = NO
+
+#IP address of Name_Server_1,
+#Value: <IP address>
+#Default: 0.0.0.0
+#Stored in NVRAM: YES
+#
+#Name_Server_1 = 0.0.0.0
+
+#IP address of Name_Server_2, default 0.0.0.0
+#Value: <IP address>
+#Default: 0.0.0.0
+#Stored in NVRAM: YES
+#
+#Name_Server_2 = 0.0.0.0
+
+#Type of name service provided by Name_Server_1
+#Values: [ Domain | IEN-116 ]
+#Default: Domain
+#Stored in NVRAM: YES
+#
+#Name_Service_1 = Domain
+
+#Type of name service provided by Name_Server_2
+#Values: [ Domain | IEN-116 ]
+#Default: Domain
+#Stored in NVRAM: YES
+#
+#Name_Service_2 = Domain
+
+#Defines nationality of keyboard and character set
+#Values: [ International | English | Belgian | German | Norwegian |
+# Swedish | French | Danish | Swiss_French | Swiss_German |
+# Italian | Spanish ]
+#Default: International
+#Stored in NVRAM: YES
+#
+Nationality = German
+
+#Minutes between the backgrounding softmount operation.
+#Values: <1-50>
+#Default: 10
+#Stored in NVRAM: NO
+#
+#NFS_Mount_Delay = 10
+
+#Number of retries before a background softmount gives up.
+#Values: <0-50>
+#Default: 10
+#Stored in NVRAM: NO
+#
+#NFS_Mount_Retries = 10
+
+#NFS Mount Definitions, must be specified when NFS is used to read fonts
+#Values: <primary host>:<path> [<secondary host>:<path>] <local path>
+#Default: Nothing
+#Stored in NVRAM: NO
+#
+NFS_Mount_Table = Default
+
+#Number of seconds to wait for answer from the NFS server.
+#Values: <1-120>
+#Default: 5
+#Stored in NVRAM: NO
+#
+#NFS_RPCTimeout = 5
+
+#Total number of seconds to wait before the termainsl gives up
+#The number of retransmissions is: NFS_TotalTimeout / NFS_RPCTimeout
+#Values: <1-120>
+#Default: 20
+#Stored in NVRAM: NO
+#
+#NFS_TotalTimeout = 20
+
+#The specific X terminal's node name.
+#Values: < hostname | <Nothing> >
+#Default: Nothing
+#Stored in NVRAM: NO
+#
+#Nodename =
+
+#Defines the screen edge color
+#Values: [ Black | White | < color name > ]
+#<color name> is mapped to the nearest value the hardware can do
+#Default: White
+#Stored in NVRAM: NO
+#
+Overscan = White
+
+#The keyboard key to be used to perform panning.
+#Value: [ < decimal X keycode > ]
+#Default: When PanMode is enabled: SHIFT, When PanMode is disbled: Disabled
+#Stored in NVRAM: NO
+#
+#PanKey =
+
+#Pan mode of virtual screen.
+#Values: [ Disabled | Auto | Manual ]
+#Default: Disabled
+#Stored in NVRAM: NO
+#
+PanMode = Disabled
+
+#The size of the virtual screen to pan.
+#Values: [ 1024x768 |1024x1024 | 1280x1024 | 2048x1024 | 4096x2048 ]
+#Default: Largest size for the terminals hardware
+#Stored in NVRAM: NO
+#
+#PanSize =
+
+#Controls password protection on / off
+#Values: [ YES | NO ]
+#Default: YES
+#Stored in NVRAM: YES
+#
+#Password = NO
+
+#Definition of parity bits on channel A
+#Values: [ Even | Odd | None ]
+#Default: None
+#Stored in NVRAM: YES
+#
+#Parity_A = None
+
+#Definition of parity bits on channel B
+#Values: [ Even | Odd | None ]
+#Default: None
+#Stored in NVRAM: YES
+#
+#Parity_B = None
+
+#Should the X server allow old errors
+#Values: [ YES | NO ]
+#Default: NO
+#Stored in NVRAM: YES
+#
+#Permit_Old_X_Bugs = YES
+
+#Query mode for XDMCP
+#Values: [ Broadcast | Direct | Indirect ]
+#Default: Broadcast
+#Stored in NVRAM: NO
+#
+Query_Mode = Direct
+
+#Should the server retain x settings after reset
+#Values: [ YES | NO ]
+#Default: NO
+#Stored in NVRAM: NO
+#
+#Retain_X_Setting = YES
+
+#Remote configuration path
+#Value: <Path to Configuration files>
+#Default: Values = /usr/lib/X11/td/configs
+#Stored in NVRAM: NO
+#
+#Remote_Config_Path = /usr/lib/X11/td/configs
+
+#Name of file storing list of RGB definitions.
+#Value: <File name> (full path name)
+#Default: Nothing
+#Stored in NVRAM: NO
+#
+#Rgb_Database =
+
+#Which users on which hosts are allowed to send remote shell commands
+#to the X terminal
+#Values: [ (- | ( hostname | +, username | + ) ) ]
+#Default: ++
+#Stored in NVRAM: NO
+#
+#Rhosts =
+
+#Sets the Screen Resolution for the TDV 6310.
+#Values: [ 800x600 | 1024x768 | 1280x960 ] (Depends on no. of Bitplanes)
+#Default: 1024x768
+#Stored in NVRAM: YES
+#
+#Screen_Resolution =
+
+#Defines a key to be used to activate the terminals menu system
+#Values: [ <decimal X keycode> ]
+#Default: TDV5010, MF102, SNI: 92 (PAUSE/BREAK)
+# TDV5030: 107 (ROOT)
+#Stored in NVRAM: NO
+#
+#Setup_Key =
+
+#Subnet Mask
+#Values: <4-byte hexadecimal number>
+#Default: value depends on IP_Address: Class A Network: ff.00.00.00
+#Stored in NVRAM: YES
+# Class B Network: ff.ff.00.00
+# Class C Network: ff.ff.ff.00
+#
+Subnet_Mask = ff.ff.ff.00
+
+#Screen saver values
+#Values: [ Off | Blanking | NoBlanking | Tiled ]
+#Default: NoBlanking
+#Stored in NVRAM: YES
+#
+Screen_Saver = Tiled
+
+#Screen saver interval
+#Values: <0..32767>
+#Default: 600
+#Stored in NVRAM: NO
+#
+#Screen_Saver_Interv = 600
+
+#If SNMP is not used, it's possible to release the RAM used by SNMP.
+#Values: [ YES | NO ]
+#Default: NO
+#Stored in NVRAM:
+#
+#Snmp_Enable = NO
+
+#The file that contains information for MIB access rights.
+#Value: <File Name> (Full path)
+#Default: Nothing
+#Stored in NVRAM: NO
+#
+#Snmp_Community_File = SnmpComFile
+
+#This parameter if set to "NO" will prohibit writes to the vendor extension MIB.
+#This variable does not prohibit remote reset if the parameter Snmp_Reset_Enable
+#is set to "YES"
+#Values: [ YES | NO ]
+#Default: NO
+#Stored in NVRAM: NO
+#
+#Snmp_Config_Change = Default
+
+#This parameter if set to "NO" will prohibit an actual reset of the rterminal
+#when the corresponding MIB variable is written to. If set to "no" and a write
+#to tdSysReset is attemted, an SNMP trap is generated
+#Values [ YES | NO ]
+#Default: value is NO
+#Stored in NVRAM: NO
+#
+#Snmp_Reset_Enable = Default
+
+#Name of the contact person of this management node and how to contact him.
+#Value: <Text string>
+#Default: Nothing
+#Stored in NVRAM: NO
+#
+#Snmp_SysContact = Mr.Smith_Phonenumber:431
+
+#The physical location of this terminal.
+#Value: <Text string>
+#Default: Nothing
+#Stored in NVRAM: NO
+#
+#Snmp_SysLocation = room344
+
+#The file to contain configuration information for the SNMP agent on how TRAPs
+#should be handled.
+#Value: <File name> (full path)
+#Default: Nothing
+#Stored in NVRAM: NO
+#
+#Snmp_Trap_Community_File = SnmpTrapFile
+
+#Number of stopbits per character on serail channel A
+#Values: [ 1 | 2 ]
+#Default: 1
+#Stored in NVRAM: YES
+#
+#Stopbits_A = 1
+
+#Number of stopbits per character on serail channel B
+#Values: [ 1 | 2 ]
+#Default: 1
+#Stored in NVRAM: YES
+#
+#Stopbits_B = 1
+
+#DECnet address for the device
+#Values: [ <DECnet address> ]
+#Default: 0.0
+#Stored in NVRAM: YES
+#
+#TDVnet_Address =
+
+#The time (sec.) between successive transmission of the DECnet hello packets
+#Value: 3->
+#Default: 60
+#Stored in NVRAM: NO
+#
+#TDVnet_Hello_Delay =
+
+#The default time in seconds before the terminal sends a keep alive packet to
+#the host
+#Values: < 3-> >
+#Default: 60
+#Stored in NVRAM: NO
+#
+#TDVnet_Keepalive_Delay =
+
+#The mapping table between names and adresses of DECnet nodes
+#Values: {<hostname>:: <DECnet adress>
+#Default: None
+#Stored in NVRAM: NO
+#
+#TDVnet_Name_Table =
+
+#Maximum number of retransmissions before reporting error
+#Value: 0->
+#Default
+#Stored in NVRAM: NO
+#
+#TDVnet_Retries =
+
+#The default time (sec.) before a DECnet connection attempt is reported
+#as unsuccessful because of no answer from inquired node
+#Value: 1-300
+#Default: 20
+#Stored in NVRAM: NO
+#
+#TDVnet_Timeout =
+
+#Timeout value for retransmitting tftp packets.
+#Value: <1 - 60>
+#Default: 5
+#Stored in NVRAM: NO
+#
+#TFTP_Timeout = 5
+
+#What channel A is used for
+#Values: [ None | Host | Printer | Card_Reader | Other ]
+#Default: Host
+#Stored in NVRAM: YES
+#
+#Usage_Port_A = Host
+
+#What channel B is used for
+#Values: [ None | Host | Printer | Card_Reader | Other ]
+#Default: Host
+#Stored in NVRAM: YES
+#
+#Usage_Port_B = Host
+
+#The user's ID on the UNIX host. Uid should not be specified in the
+#global configuration file.
+#Values: <-2 - 999999999>
+#Default: -2
+#Stored in NVRAM: NO
+#
+#Uid = -2
+
+#Read file /usr/lib/X11/td/configs/dd.dd/dd.dd
+#where dd.dd/dd.dd is the IP address of the TDV 6230
+#which owns this configuration file
+#Values: [ YES | NO ]
+#Default: YES
+#Stored in NVRAM: NO
+#
+Use_Remote_Config = YES
+
+#Video timeout values
+#Values: <0..32767>
+#Default: 600
+#Stored in NVRAM: NO
+#
+#Video_Timeout = 600
+
+#Sets the default Visual Class in the X Display Server. This parameter
+#controls how pixel values are translated into colours.
+#Values: [ StaticGray ] on the TDV 6230/1
+# [ StaticGray | GrayScale ] on the TDV 6230/4
+# [ StaticGray | GrayScale | StaticColor | PseudoColor |
+# TrueColor | DirectColor ] on the TDV 6310 and F versions
+#Default: StaticGrey on the TDV 6230/1
+# GrayScale on the TDV 6230/4
+# PseudoColor on the TDV 6310 and F versions
+#Stored in NVRAM: NO
+#
+#VisualClass =
+
+#Save configuration switches to NVRAM
+#Values: [ YES | NO ]
+#Default: NO
+#Stored in NVRAM: NO
+#
+#Write_To_Nvram = NO
+
+#Controls the method for login onto the host
+#Values: [none | XDMCP | DECwindows]
+#Default: XDMCP
+#Stored in NVRAM: NO
+#
+X_Log_on_Method = XDMCP
+
+#XDM polling interval in minutes
+#Value: <decimal number>
+#Default: 3
+#Stored in NVRAM: NO
+#
+#Xdm_Poll_Interval = 10
+
+#How many seconds to wait for dead session detection poll to
+#manager host
+#Value: <decimal number>
+#Default: 30
+#Stored in NVRAM: NO
+#
+#Xdm_Poll_Timeout = 120
+
+#Which hosts should be alowed to connect to the X server
+#Value: [ None | + | { <hostname> | <IP address> }]
+#Default: +
+#Stored in NVRAM: NO
+#
+Xhosts = Default
+
+#The keyboard key to perform the Zoom function.
+#Values: [ Disabled | < decimal X keycode > ]
+#Default: When PanMode is enabled: CLEAR when using the TDV 5030 keyboard.
+# PrintScreen/Sysreq when using the other keyboards.
+# When PanMode is disbled: Disabled
+#Stored in NVRAM: NO
+#
+#ZoomKey = Disabled
+Remote_Config_Path = /tftpboot/usr/lib/X11/td/configs
+Font_Path = /tftpboot/usr/lib/X11/td/fonts/misc
+            /tftpboot/usr/lib/X11/td/fonts/75dpi
+            /tftpboot/usr/lib/X11/td/fonts/100dpi
+
